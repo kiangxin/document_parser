@@ -5,8 +5,12 @@ from pinecone import Pinecone, ServerlessSpec
 from sentence_transformers import SentenceTransformer
 import time
 import hashlib
+from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
+
+load_dotenv()
+
 
 class VectorStoreManager:
     """

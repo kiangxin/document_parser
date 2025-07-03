@@ -2,9 +2,13 @@ import streamlit as st
 import os
 import logging
 from typing import List, Dict, Any
+from dotenv import load_dotenv
 from src.services.document_processor import DocumentProcessor
 from src.services.vector_store import VectorStoreManager
 from src.utils.file_handler import FileHandler
+
+# Load environment variables from .env file
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -442,12 +446,12 @@ def upload_to_pinecone(index_name: str, namespace: str, embedding_model: str):
                 # Get chunks from processed document
                 processed_content = doc_data['chunks']
                 
-                # Debug: Check what we're about to upload
-                st.write(f"**Debug - Uploading {filename}:**")
-                st.write(f"- Total chunks: {len(processed_content)}")
-                for j, chunk in enumerate(processed_content[:2]):  # Show first 2 chunks
-                    st.write(f"- Chunk {j+1}: {len(chunk.get('text', ''))} characters")
-                    st.write(f"  Preview: '{chunk.get('text', '')[:100]}...'")
+                # # Debug: Check what we're about to upload
+                # st.write(f"**Debug - Uploading {filename}:**")
+                # st.write(f"- Total chunks: {len(processed_content)}")
+                # for j, chunk in enumerate(processed_content[:2]):  # Show first 2 chunks
+                #     st.write(f"- Chunk {j+1}: {len(chunk.get('text', ''))} characters")
+                #     st.write(f"  Preview: '{chunk.get('text', '')[:100]}...'")
                 
                 # Store in vector database
                 vector_ids = st.session_state.vector_store.store_documents(
