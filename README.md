@@ -2,7 +2,7 @@
 
 A sophisticated AI/ML document processing system that converts various document formats into LLM-ready format and stores them in Pinecone vector database for semantic search and retrieval.
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -18,7 +18,7 @@ A sophisticated AI/ML document processing system that converts various document 
 └─────────────────┘    └──────────────────┘    └─────────────────┘
 ```
 
-## 🚀 Features
+##  Features
 
 ### Document Processing
 - **Multi-format Support**: PDF, DOCX, PPTX, XLSX, HTML, Markdown, TXT, and more
@@ -39,7 +39,7 @@ A sophisticated AI/ML document processing system that converts various document 
 - **Search Interface**: Semantic search with configurable result ranking
 - **Configuration Panel**: Dynamic settings adjustment without code changes
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 document_parser/
@@ -63,7 +63,7 @@ document_parser/
 └── tests/                         # Unit tests (to be implemented)
 ```
 
-## 🔧 System Components
+##  System Components
 
 ### 1. Document Processor (`src/services/document_processor.py`)
 - **Docling Integration**: Leverages Docling's advanced document conversion capabilities
@@ -87,7 +87,7 @@ document_parser/
 - **Default Values**: Sensible defaults with override capabilities
 - **Validation**: Configuration validation and error handling
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -122,7 +122,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 2. **OpenAI Embeddings**:
    - `text-embedding-ada-002` (High quality, 1536 dimensions)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Installation
 
@@ -156,7 +156,7 @@ streamlit run app.py
 
 Access the application at `http://localhost:8501`
 
-## 📊 Usage Workflow
+##  Usage Workflow
 
 ### 1. Document Upload
 - Upload one or multiple documents via the web interface
